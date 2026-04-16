@@ -30,14 +30,15 @@ target_compile_options(
 target_include_directories(
     tgt_exe_idxread
     PRIVATE
-        ../../third_party/their/include
+        ../../third_party/libcla/include
+        ../../third_party/libidx/include
 )
 
 target_link_libraries(
     tgt_exe_idxread
     PRIVATE
-        m
-        tgt_lib_their
+        tgt_lib_cla
+        tgt_lib_idx
 )
 
 target_link_options(
@@ -50,11 +51,7 @@ target_link_options(
 target_sources(
     tgt_exe_idxread
     PRIVATE
-        addition.c
-        division.c
         main.c
-        multiplication.c
-        subtraction.c
 )
 
 install(TARGETS tgt_exe_idxread)

@@ -1,0 +1,6 @@
+[submodule "third_party/libcla"]
+	path = third_party/libcla
+	url = https://github.com/jspaaks/libcla.git
+[submodule "third_party/libidx"]
+	path = third_party/libidx
+	url = https://github.com/jspaaks/libidx.git
