@@ -3,6 +3,37 @@
 Program to read data and metadata from IDX files, such as those from Yann LeCun's handwritten numbers dataset.
 
 ```console
+$ idxread --help
+Usage: idxread [--help|-h]
+Usage: idxread [--meta|-m] FILEPATH
+Usage: idxread [OPTIONS] FILEPATH
+
+    Read IDX-formatted data from a binary file located at FILEPATH.
+
+    Options
+
+    --nhead NELEMS
+
+        Show the first NELEMS elements of the data in FILEPATH
+
+    --meta, -m
+
+        Show the metadata of the data in FILEPATH
+
+    --ncolumns, -c NCOLUMNS
+
+        Print the data using NCOLUMNS columns
+
+    --ntail, -t NELEMS
+
+        Show the last NELEMS elements of the data in FILEPATH
+
+$ idxread --meta t10k-images.idx3-ubyte
+path              : t10k-images.idx3-ubyte
+type              : 0x08 (uint8)
+ndims             : 3 
+dimension lengths : 10000 28 28 
+number of elements: 7840000
 $ idxread --nhead 784 --ncolumns 28  t10k-images.idx3-ubyte
   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0   0
